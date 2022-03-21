@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,800;1,400&family=Oleo+Script:wght@400;700&display=swap");
+
+@media screen and (max-width: 1060px) {
+  #primary {
+    width: 67%;
+  }
+  #secondary {
+    width: 30%;
+    margin-left: 3%;
+  }
+}
+
+/* Tabled Portrait */
+@media screen and (max-width: 768px) {
+  #primary {
+    width: 100%;
+  }
+  #secondary {
+    width: 100%;
+    margin: 0;
+    border: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(hillgirl.png);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+nav {
+  background: rgb(0, 209, 199);
+  padding: 0px 100px;
+
+  width: 100%;
+
+  line-height: 60px;
+  position: fixed;
+  z-index: 1;
+}
+
+nav .logo p {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: rgb(148, 121, 0);
+
+  text-decoration-line: underline;
+  float: left;
+  letter-spacing: 1.5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  text-align: right;
+}
+nav ul li a {
+  color: rgb(85, 61, 10);
+  font-size: 1.6rem;
+  margin: 0 0.6rem;
+  text-decoration: solid;
+  padding-left: 0px 100px;
+  position: relative;
+}
+nav .navbar {
+  text-align: right;
+  padding-top: 30px;
+}
+nav .navbar a:hover {
+  color: rgb(187, 85, 2);
+  text-decoration: underline;
+}
+
+.image {
+  position: relative;
+  margin-left: 70px;
+}
+
+.hey {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  object-position: center;
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.hey:hover {
+  transform: scale(1.2);
+  z-index: 2;
+}
+.ant {
+  font-size: 40px;
+  text-decoration: solid;
+  font-weight: bolder;
+  text-shadow: 15px;
+  font-family: "Karla", sans-serif;
+  color: rgb(28, 28, 46);
+}
+.common {
+  font-size: 20px;
+  text-decoration: wavy;
+
+  font-family: "Oleo Script", cursive;
+}
+.dstn {
+  margin-left: 70px;
+}
+
+.image {
+  position: relative;
+  width: 400px;
+}
+.image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+  backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary {
+  background: #252518;
+}
+
+.image__overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+  opacity: 1;
+}
+
+.image__overlay:hover > * {
+  transform: translateY(0);
+}
+
+.image__title {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.image__description {
+  font-size: 1.25em;
+  margin-top: 0.25em;
+}
+.image__img {
+  display: block;
+  width: 300px;
+  height: 300px;
+}
