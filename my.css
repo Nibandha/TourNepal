@@ -34,6 +34,10 @@
                                 z-index: 1;
                             }
                             
+                            nav .logo {
+                                padding-top: 20px;
+                            }
+                            
                             nav .logo p {
                                 font-size: 2.5rem;
                                 font-weight: bolder;
@@ -41,15 +45,12 @@
                                 text-decoration-line: underline;
                                 float: left;
                                 letter-spacing: 1.5px;
-                                padding-top: 20px;
-                                padding-bottom: 20px;
-                                padding-left: 10px;
                             }
                             
                             nav ul li {
-                                display: inline-block;
                                 list-style: none;
                                 text-align: right;
+                                display: inline;
                             }
                             
                             nav ul li a {
@@ -58,12 +59,12 @@
                                 margin: 0 0.6rem;
                                 text-decoration: solid;
                                 padding-left: 0px 100px;
-                                position: relative;
                             }
                             
                             nav .navbar {
                                 text-align: right;
-                                padding-top: 30px;
+                                padding-left: 25%;
+                                padding-top: 10px;
                             }
                             
                             nav .navbar a:hover {
@@ -111,6 +112,7 @@
                                 transform: scale(1.2);
                                 z-index: 2;
                             }
+                            /*applying overlay to the first image from the galley*/
                             
                             .image {
                                 position: relative;
