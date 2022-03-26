@@ -117,7 +117,8 @@
                             .image {
                                 position: relative;
                                 margin-left: 70px;
-                                width: 400px;
+                                width: 300px;
+                                height: 300px;
                             }
                             
                             .image__overlay {
@@ -125,7 +126,7 @@
                                 top: 0;
                                 left: 0;
                                 width: 300px;
-                                height: 100%;
+                                height: 300px;
                                 background: rgba(0, 0, 0, 0.6);
                                 color: #ffffff;
                                 font-family: "Quicksand", sans-serif;
@@ -296,4 +297,8 @@
                                 width: 100%;
                                 line-height: 20px;
                                 position: relative;
+                            }
+                            
+                            .momo {
+                                display: grid;
                             }
