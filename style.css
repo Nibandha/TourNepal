@@ -1,0 +1,150 @@
+.header {
+    text-shadow: black;
+    padding: 10px;
+    background-color: silver;
+}
+
+.header1 {
+    text-align: center;
+}
+
+.gmail {
+    padding-left: 89%;
+    position: absolute;
+    top: 0;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.fa-envelope {
+    padding-left: 87.5%;
+    top: 0;
+    position: absolute;
+    margin-top: 10px;
+}
+
+.fa-phone {
+    padding-left: 79.5%;
+    top: 0;
+    position: absolute;
+    margin-top: 10px;
+}
+
+.phn {
+    padding-left: 81%;
+    position: absolute;
+    top: 0;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.footer {
+    text-align: center;
+    background: rgb(18, 150, 18);
+    padding: 10px;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.cn {
+    padding-left: 57%;
+    margin-top: -32.5%;
+}
+
+#myform p {
+    font-family: 'Times New Roman', Times, serif;
+    color: black
+}
+
+.fa-facebook {
+    background: blue;
+    color: white;
+    width: 30px;
+    height: 20px;
+    padding-top: 5px;
+}
+
+.fa-twitter {
+    background: white;
+    background: blue;
+    color: white;
+    width: 30px;
+    height: 20px;
+    padding-top: 5px;
+}
+
+.fa-instagram {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+    width: 30px;
+    height: 20px;
+    padding-top: 5px;
+}
+
+.fa-linkedin {
+    background: blue;
+    color: white;
+    width: 30px;
+    height: 20px;
+    padding-top: 5px;
+}
+
+#bt {
+    padding: 8px 125px 8px 8px;
+    background-color: rgb(18, 150, 18);
+    color: white;
+}
+
+.mq {
+    background-color: rgb(18, 150, 18);
+    color: white;
+    padding: 10px;
+    font-size: large;
+}
+
+.pic {
+    border-radius: 16px;
+    border-color: black;
+}
+
+#txt {
+    padding-left: 40px;
+}
+
+#name {
+    padding-left: 37px;
+}
+
+.img1 {
+    margin-top: -32%;
+    border-radius: 49%;
+    position: absolute;
+    right: 110px;
+    height: 180px;
+    width: 180px;
+}
+
+.img2 {
+    margin-top: -23%;
+    border-radius: 49%;
+    position: absolute;
+    right: 34px;
+    height: 180px;
+    width: 180px;
+}
+
+.img3 {
+    margin-top: -15%;
+    border-radius: 49%;
+    position: absolute;
+    right: 110px;
+    height: 180px;
+    width: 180px;
+}
+
+.about {
+    display: flex;
+}
