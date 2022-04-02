@@ -1,4 +1,4 @@
-.header {
+/*.header {
     text-shadow: black;
     padding: 10px;
     background-color: silver;
@@ -36,7 +36,111 @@
     top: 0;
     text-decoration: none;
     margin-top: 10px;
+}*/
+
+
+/*navigation bar section*/
+
+@media screen and (max-width: 768px) {
+    #primary {
+        width: 100%;
+    }
+    #secondary {
+        width: 100%;
+        margin: 0;
+        border: none;
+    }
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding-top: 120px;
+}
+
+nav {
+    background: rgb(0, 209, 199);
+    padding: 0px 100px;
+    width: 100%;
+    line-height: 60px;
+    position: fixed;
+    z-index: 1;
+}
+
+nav .logo {
+    padding-top: 20px;
+}
+
+nav .logo p {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: rgb(148, 121, 0);
+    text-decoration-line: underline;
+    float: left;
+    letter-spacing: 1.5px;
+}
+
+nav ul li {
+    list-style: none;
+    text-align: right;
+    display: inline;
+}
+
+.navbar ul li .bcgrnd-stay {
+    background-color: antiquewhite;
+}
+
+
+/*login botton*/
+
+nav ul li button {
+    font-size: 10%;
+    border-radius: 8px;
+    background-color: ghostwhite;
+    padding: 5px;
+    border: none;
+    float: right;
+}
+
+.mybtn {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    padding-left: 20px;
+}
+
+.btntxt {
+    font-size: 15px;
+    font-family: font-family: 'Merriweather', serif;
+}
+
+nav ul li a {
+    color: rgb(85, 61, 10);
+    font-size: 1.4rem;
+    margin: 0 0.6rem;
+    text-decoration: solid;
+    padding: 1%;
+    font-family: "Quicksand", sans-serif;
+    border-radius: 8px;
+}
+
+nav .navbar {
+    text-align: right;
+    padding-left: 25%;
+    padding-top: 10px;
+}
+
+nav .navbar a:hover {
+    color: rgb(187, 85, 2);
+    background-color: #ece9e9;
+}
+
+
+/*-----------------------------------*/
 
 .footer {
     text-align: center;
@@ -50,7 +154,7 @@
 
 .cn {
     padding-left: 57%;
-    margin-top: -32.5%;
+    margin-top: -23.5%;
 }
 
 #myform p {
@@ -93,9 +197,13 @@
 }
 
 #bt {
-    padding: 8px 125px 8px 8px;
-    background-color: rgb(18, 150, 18);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(143, 43, 43);
     color: white;
+    border-radius: 8px;
 }
 
 .mq {
@@ -145,6 +253,25 @@
     width: 180px;
 }
 
+.aboutus-all {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
 .about {
     display: flex;
+}
+
+
+/*footer section*/
+
+footer {
+    background-color: rgb(21, 211, 201);
+    width: 100%;
+    line-height: 20px;
+    position: relative;
+}
+
+.momo {
+    display: grid;
 }
