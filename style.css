@@ -76,12 +76,15 @@ nav .logo {
 }
 
 nav .logo p {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     font-weight: bolder;
-    color: rgb(148, 121, 0);
-    text-decoration-line: underline;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 153, 51);
+    border-radius: 8px;
     float: left;
     letter-spacing: 1.5px;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 nav ul li {
@@ -115,8 +118,14 @@ nav ul li button {
 
 .btntxt {
     font-size: 15px;
-    font-family: font-family: 'Merriweather', serif;
+    font-family: 'Merriweather', serif;
 }
+
+
+/*--------------*/
+
+
+/*menu*/
 
 nav ul li a {
     color: rgb(85, 61, 10);
@@ -142,6 +151,8 @@ nav .navbar a:hover {
 
 /*-----------------------------------*/
 
+
+/*
 .footer {
     text-align: center;
     background: rgb(18, 150, 18);
@@ -151,6 +162,7 @@ nav .navbar a:hover {
 .footer a {
     text-decoration: none;
 }
+*/
 
 .cn {
     padding-left: 57%;
@@ -162,12 +174,16 @@ nav .navbar a:hover {
     color: black
 }
 
+
+/*icons in footer*/
+
 .fa-facebook {
     background: blue;
     color: white;
     width: 30px;
-    height: 20px;
-    padding-top: 5px;
+    height: 30px;
+    padding: 10px;
+    font-size: 20px;
 }
 
 .fa-twitter {
@@ -175,8 +191,9 @@ nav .navbar a:hover {
     background: blue;
     color: white;
     width: 30px;
-    height: 20px;
-    padding-top: 5px;
+    height: 30px;
+    padding: 10px;
+    font-size: 20px;
 }
 
 .fa-instagram {
@@ -184,26 +201,38 @@ nav .navbar a:hover {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     color: white;
     width: 30px;
-    height: 20px;
-    padding-top: 5px;
+    height: 30px;
+    padding: 10px;
+    font-size: 20px;
 }
 
 .fa-linkedin {
-    background: blue;
+    background: rgb(75, 119, 214);
     color: white;
     width: 30px;
-    height: 20px;
-    padding-top: 5px;
+    height: 30px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+footer .foot-icon {
+    position: flex;
+    margin-left: 80%
 }
 
 #bt {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: rgb(143, 43, 43);
+    background-color: rgb(255, 153, 51);
     color: white;
     border-radius: 8px;
+}
+
+#bt:hover {
+    background-color: aquamarine;
 }
 
 .mq {
@@ -258,18 +287,37 @@ nav .navbar a:hover {
     padding-bottom: 50px;
 }
 
-.about {
-    display: flex;
-}
-
 
 /*footer section*/
 
 footer {
-    background-color: rgb(21, 211, 201);
+    background-color: rgb(51, 211, 201);
     width: 100%;
     line-height: 20px;
     position: relative;
+}
+
+.foot-logo h3 {
+    color: rgb(250, 250, 250);
+    float: left;
+    letter-spacing: 1.5px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 70px;
+}
+
+.foot-logo h3 p {
+    justify-content: center;
+    background-color: rgb(255, 153, 51);
+    width: 110%;
+    padding-left: 20px;
+    border-radius: 8px;
+}
+
+footer h4 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 210px;
 }
 
 .momo {

@@ -38,12 +38,15 @@
                             }
                             
                             nav .logo p {
-                                font-size: 2.5rem;
+                                font-size: 1.6rem;
                                 font-weight: bolder;
-                                color: rgb(148, 121, 0);
-                                text-decoration-line: underline;
+                                color: rgb(255, 255, 255);
+                                background-color: rgb(255, 153, 51);
+                                border-radius: 8px;
                                 float: left;
                                 letter-spacing: 1.5px;
+                                padding-left: 1%;
+                                padding-right: 1%;
                             }
                             
                             nav ul li {
@@ -54,7 +57,7 @@
                             
                             @media screen and (max-width: 600px) {
                                 .navbar a {
-                                    float: none;
+                                    font-size: 15px;
                                     width: 100%;
                                 }
                             }
@@ -78,7 +81,7 @@
                             
                             .btntxt {
                                 font-size: 15px;
-                                font-family: font-family: 'Merriweather', serif;
+                                font-family: 'Merriweather', serif;
                             }
                             
                             nav ul li a {
@@ -209,6 +212,10 @@
                                 width: 300px;
                                 height: 300px;
                             }
+                            
+                            .momo {
+                                display: flexbox;
+                            }
                             /*css in titles*/
                             
                             .ant {
@@ -328,14 +335,77 @@
                             /*footer section*/
                             
                             footer {
-                                background-color: rgb(21, 211, 201);
+                                background-color: rgb(51, 211, 201);
                                 width: 100%;
                                 line-height: 20px;
                                 position: relative;
                             }
                             
-                            .momo {
-                                display: grid;
+                            .foot-logo h3 {
+                                color: rgb(250, 250, 250);
+                                float: left;
+                                letter-spacing: 1.5px;
+                                padding-top: 40px;
+                                padding-bottom: 20px;
+                                padding-left: 70px;
+                            }
+                            
+                            .foot-logo h3 p {
+                                justify-content: center;
+                                background-color: rgb(255, 153, 51);
+                                width: 110%;
+                                padding-left: 20px;
+                                border-radius: 8px;
+                            }
+                            
+                            footer h4 {
+                                padding-top: 40px;
+                                padding-bottom: 20px;
+                                padding-left: 210px;
+                            }
+                            /*icons in footer*/
+                            
+                            .fa-facebook {
+                                background: blue;
+                                color: white;
+                                width: 30px;
+                                height: 30px;
+                                padding: 10px;
+                                font-size: 20px;
+                            }
+                            
+                            .fa-twitter {
+                                background: white;
+                                background: blue;
+                                color: white;
+                                width: 30px;
+                                height: 30px;
+                                padding: 10px;
+                                font-size: 20px;
+                            }
+                            
+                            .fa-instagram {
+                                background: #d6249f;
+                                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+                                color: white;
+                                width: 30px;
+                                height: 30px;
+                                padding: 10px;
+                                font-size: 20px;
+                            }
+                            
+                            .fa-linkedin {
+                                background: rgb(75, 119, 214);
+                                color: white;
+                                width: 30px;
+                                height: 30px;
+                                padding: 10px;
+                                font-size: 20px;
+                            }
+                            
+                            footer .foot-icon {
+                                position: flex;
+                                margin-left: 80%
                             }
                             /*------Book now page -------*/
                             
@@ -532,3 +602,4 @@
                                     font-size: 14px;
                                 }
                             }
+                            /*-----------------------*/
