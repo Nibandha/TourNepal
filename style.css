@@ -58,6 +58,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: bisque;
+}
+
 .container {
     padding-top: 120px;
 }
@@ -182,8 +186,9 @@ nav .navbar a:hover {
     color: white;
     width: 30px;
     height: 30px;
-    padding: 10px;
+    padding: 12px;
     font-size: 20px;
+    text-decoration: none;
 }
 
 .fa-twitter {
@@ -192,8 +197,9 @@ nav .navbar a:hover {
     color: white;
     width: 30px;
     height: 30px;
-    padding: 10px;
+    padding: 12px;
     font-size: 20px;
+    text-decoration: none;
 }
 
 .fa-instagram {
@@ -202,8 +208,9 @@ nav .navbar a:hover {
     color: white;
     width: 30px;
     height: 30px;
-    padding: 10px;
+    padding: 12px;
     font-size: 20px;
+    text-decoration: none;
 }
 
 .fa-linkedin {
@@ -211,8 +218,9 @@ nav .navbar a:hover {
     color: white;
     width: 30px;
     height: 30px;
-    padding: 10px;
+    padding: 12px;
     font-size: 20px;
+    text-decoration: none;
 }
 
 footer .foot-icon {
@@ -229,6 +237,7 @@ footer .foot-icon {
     background-color: rgb(255, 153, 51);
     color: white;
     border-radius: 8px;
+    border: none;
 }
 
 #bt:hover {
@@ -322,4 +331,158 @@ footer h4 {
 
 .momo {
     display: grid;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.story-info {
+    color: rgb(138, 136, 136);
+    font-size: 14px;
+    font-weight: 300px;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* for destination page!!!! */
+
+.places {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.places-col {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.places-col img {
+    width: 96%;
+    display: block;
+}
+
+.places-cols img {
+    width: 100%;
+    display: block;
+}
+
+.places-cols {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 96%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgb(255, 153, 51)
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 23px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.lrnmore {
+    text-decoration: none;
+}
+
+.layer .lrnmore {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover .lrnmore {
+    bottom: 49%;
+    opacity: 1;
+}
+
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+/* for story page !!!! */
+
+.picks-col .fa {
+    color: #f44336;
+}
+
+.top-picks {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.picks-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.picks-col img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.picks-col p {
+    padding: 0;
+}
+
+.picks-col h3 {
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.picks-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.img-search {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear;
+    background-position: center;
+    background-size: cover;
+    background-position: relative;
 }
