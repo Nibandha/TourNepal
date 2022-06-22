@@ -1,16 +1,4 @@
                             @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,800;1,400&family=Oleo+Script:wght@400;700&display=swap");
-                            /* Tabled Portrait */
-                            /*  @media screen and (max-width: 768px) {
-                                #primary {
-                                    width: 100%;
-                                }
-                                #secondary {
-                                    width: 100%;
-                                    margin: 0;
-                                    border: none;
-                                }
-                            }*/
-                            
                             * {
                                 margin: 0;
                                 padding: 0;
@@ -56,25 +44,64 @@
                                 display: inline;
                             }
                             /********************************************/
+                            /*************************************************************************/
                             
-                            nav .rep-icon i {
+                            .checkbtn {
+                                font-size: 30px;
+                                color: white;
+                                float: right;
+                                line-height: 80px;
+                                margin-right: 40px;
                                 cursor: pointer;
-                                margin-left: 0.5rem;
-                                height: 1.5rem;
-                                line-height: 1.5rem;
-                                width: 1.5rem;
-                                text-align: center;
-                                font-size: 1rem;
-                                border-radius: 50%;
-                                background: #eee;
                             }
                             
-                            nav .rep-icon #menu-bars {
+                            #check {
                                 display: none;
                             }
-                            /*--------media query for nav bar-----------*/
                             
-                            @media screen and (max-width: 600px) {
+                            @media(max-width:952px) {
+                                nav .logo {
+                                    font-size: 30px;
+                                    padding-left: 50px;
+                                }
+                                nav ul li a {
+                                    font-size: 16px;
+                                }
+                            }
+                            
+                            @media(max-width:858px) {
+                                .checkbtn {
+                                    display: block;
+                                }
+                                .navbar ul {
+                                    position: fixed;
+                                    width: 100%;
+                                    height: 100vh;
+                                    background: #fdf497;
+                                    top: 80px;
+                                    left: -100%;
+                                    transition: all .5s;
+                                    text-align: center;
+                                }
+                                nav ul li {
+                                    display: block;
+                                    margin: 50px 0;
+                                    line-height: 30px;
+                                }
+                                nav ul li a {
+                                    font-size: 20px;
+                                }
+                                a:hover,
+                                a.active {
+                                    background: none;
+                                    color: #fdf497;
+                                }
+                                #check:checked~ul {
+                                    left: 0;
+                                }
+                            }
+                            /*--------media query for nav bar-----------*/
+                            /*  @media screen and (max-width: 600px) {
                                 .navbar a {
                                     font-size: 15px;
                                     width: 50%;
@@ -182,8 +209,7 @@
                                 z-index: 2;
                             }
                             /*applying overlay to the first image from the galley*/
-                            
-                            .image {
+                            /* .image {
                                 position: relative;
                                 margin-left: 70px;
                                 width: 300px;
@@ -368,7 +394,7 @@
                             /*footer section*/
                             
                             footer {
-                                background-color: rgb(51, 211, 201);
+                                background-color: rgb(50, 218, 201);
                                 width: 100%;
                                 line-height: 20px;
                             }
@@ -687,4 +713,58 @@
                                 background-repeat: no-repeat;
                                 background-size: 100% 100%;
                             }
-                            /*--------------
+                            
+                            .logged-in {
+                                padding-top: 100px;
+                                font-family: Arial, Helvetica, sans-serif;
+                                text-decoration: none;
+                                text-align: center;
+                                background-color: #f2f2f2;
+                            }
+                            /*--------------Tours page----------------------*/
+                            
+                            div.gallery {
+                                margin: 5px;
+                                border: 1px solid rgb(221, 193, 193);
+                                float: left;
+                                width: 250px;
+                            }
+                            
+                            div.gallery:hover {
+                                border: 1px solid rgb(179, 163, 28);
+                            }
+                            
+                            div.gallery img {
+                                width: 100%;
+                                height: auto;
+                            }
+                            
+                            div.desc {
+                                padding: 15px;
+                                text-align: center;
+                                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                                font-size: 15px;
+                                color: rgb(121, 114, 114);
+                            }
+                            
+                            div .desc h3:hover {
+                                color: #918612;
+                            }
+                            
+                            div .content {
+                                display: flex;
+                                margin-bottom: px;
+                            }
+                            
+                            div.desc h3 a {
+                                padding: 15px;
+                                text-align: center;
+                                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                                font-size: 15px;
+                                color: rgb(121, 114, 114);
+                                text-decoration: none;
+                            }
+                            
+                            div .desc h3 a:hover {
+                                color: #918612;
+                            }

@@ -1,3 +1,24 @@
+<?php
+$showAlert=false;
+$showError=false;
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    include 'db-connect.php';
+    $username=$_POST["username"];
+    $password=$_POST["password"];
+    $email=$_POST["email"];
+    $exists=false;
+    if($exists==false && $password < 8){
+        $sql = "INSERT INTO `signup` ( `Username`, `password`, `email`) VALUES ('$username', '$password', '$email')";
+    $result = mysqli_query($conn,$sql);
+    if($result){
+        $showAlert=true;
+    }
+    else{
+        $showError="entry exists or requirements donot match!";
+    }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,9 +28,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signup</title>
     <link rel="stylesheet" href="my.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body style="background-image: url(images/bck3.jpg);background-repeat: no-repeat;background-size: 100% 100%;">
+    <?php require 'db-connect.php'?>
+   
     <nav>
 
         <div class="topbar">
@@ -23,11 +47,11 @@
 
         <div class="navbar" id="myTopnav">
             <ul>
-                <li> <a href="new.html">Home</a></li>
-                <li> <a href="error.html">Destination</a></li>
-                <li><a href="error.html">Tours</a></li>
-                <li> <a href="story.html">Stories</a></li>
-                <li style="padding-right: 20px;"><a href="contacts.html ">Contact</a></li>
+                <li> <a href="new.php">Home</a></li>
+                <li> <a href="destination.php">Destination</a></li>
+                <li><a href="tours.php">Tours</a></li>
+                <li> <a href="story.php">Stories</a></li>
+                <li style="padding-right: 20px;"><a href="contacts.php ">Contact</a></li>
 
             </ul>
 
@@ -42,11 +66,11 @@
         <div>
             <div class="form " style="max-width: 400px;min-height: 400px;">
                 <h2>Sign Up </h2>
-                <form class="register-form ">
-                    <input type="text " placeholder="name " />
-                    <input type="password " placeholder="password " />
-                    <input type="text " placeholder="email address " />
-                    <button>create</button>
+                <form class="register-form" action="signup.php" method="POST">
+                    <input type="text " id="username" name="username" placeholder="name " />
+                    <input type="password " id="password" name="password" placeholder="password " />
+                    <input type="email" id="email" name="email" placeholder="email address " />
+                    <button >create</button>
                 </form>
             </div>
         </div>

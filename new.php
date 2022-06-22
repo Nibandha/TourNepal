@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="my.css">
     <!--for icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
     <!--script-->
     <script rel="javascript" src="JavaScript.js"></script>
 
@@ -22,7 +25,10 @@
     <!-- header section starts  -->
 
     <nav>
-
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+    <i class="fas fa-bars"></i>
+</label>
         <div class="topbar">
 
             <div class="logo">
@@ -36,12 +42,12 @@
 
 
             <ul>
-                <li> <a href="new.html" class="bcgrnd-stay">Home</a></li>
-                <li> <a href="destination.html">Destination</a></li>
-                <li><a href="error.html">Tours</a></li>
-                <li> <a href="story.html">Stories</a></li>
-                <li style="padding-right: 20px;"><a href="contacts.html ">Contact</a></li>
-                <li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login.html" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" >Login/SignUp</a></button></li>
+                <li> <a href="new.php" class="bcgrnd-stay">Home</a></li>
+                <li> <a href="destination.php">Destination</a></li>
+                <li><a href="tours.php">Tours</a></li>
+                <li> <a href="story.php">Stories</a></li>
+                <li style="padding-right: 20px;"><a href="contacts.php ">Contact</a></li>
+                <li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login.php" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" >Login/SignUp</a></button></li>
             </ul>
 
         </div>
@@ -75,6 +81,7 @@
         <a href="Book.html"><img src="images/dessert.jpg " class="hey "></a>
         <a href="Book.html"> <img src="images/elephant.jpg " class="hey "></a>
         <a href="Book.html"><img src="images/cap.jpg " class="hey "></a>
+        <a href="Book.html"><img src="images/temple.jpg " class="hey "></a>
         <a href="Book.html"><img src="images/temple.jpg " class="hey "></a>
 
     </div>
