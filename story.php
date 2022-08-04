@@ -40,15 +40,6 @@
 
     </nav>
 
-
-
-
-
-
-
-
-
-
     <section class="top-picks">
         <h1 style="color:rgb(28, 28, 46);text-align:center;font-size:25px;font-weight:bold; padding-top: 50px; ">What Our User Says</h1>
         <p style="color:rgb(28, 28, 46);text-align:center;font-size:18px;font-weight:bold;font-family: Oleo Script, cursive;padding-bottom: 30px;">Share Us Your Best Experiences.</p>

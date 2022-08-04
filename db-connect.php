@@ -1,13 +1,7 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database="tournepalapp";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password,$database);
-
-
-// Check connection
-
-?> 
+<?php 
+$con = mysqli_connect('localhost', 'root', '', 'tournepalapp');
+if(!$con){
+    die(mysqli_error($con));
+}
+?>

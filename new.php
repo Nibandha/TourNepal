@@ -25,9 +25,7 @@
     <!-- header section starts  -->
 
     <nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-    <i class="fas fa-bars"></i>
+        
 </label>
         <div class="topbar">
 
@@ -55,7 +53,7 @@
 
     </nav>
     <div class="img-search ">
-        <img src="images/mountain1.jpg " width="1350px " text-align="center ">
+        <img src="images/mountain1.jpg " width="1350px" text-align="center ">
         <div class="search-bar ">
 
             <input type="text " placeholder="Search.. ">

@@ -1,23 +1,35 @@
 <?php
-$login=false;
-$showError=false;
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    include 'db-connect.php';
-    $username=$_POST["username"];
-    $password=$_POST["password"];
+
+include 'db-connect.php';
+session_start();
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    $username = mysqli_real_escape_string($con,$_POST['username']);
+    $password = mysqli_real_escape_string($con,$_POST['password']);
     
     
-        $sql ="Select * from users where username='$username' AND password='$password'";
-    $result = mysqli_query($conn,$sql);
-    $num = mysqli_num_rows($result);
-    if($num == 1){
-        $login=true;
+        $sql ="SELECT * FROM register WHERE username='$username' AND password='$password'";
+    $result = mysqli_query($con,$sql);
+    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+    
+    
+    $count = mysqli_num_rows($result);
+    
+   
+      
+    if($count == 1) {
+       
+       $_SESSION['login_user'] = $username;
+       
+       header("location: new.php");
+    }else {
+       echo "Your Login Name or Password is invalid";
     }
-    else{
-        $showError="invalid Cardentials";
-    }
-    }
+ }
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,19 +72,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </div>
 
     </nav>
-    <?php($login){
-    echo'<div class="logged-in">
-    <a  style="text-decoration: none;color: rgb(105, 91, 91);">
-        <h3 class="head-txt" style="text-decoration:none;color: rgb(245,158,11);">Login Sucessed.</h3>
-</div>';
-}
-if($showError){
-    echo'<div class="logged-in">
-    <a  style="text-decoration: none;color: rgb(105, 91, 91);">
-        <h3 class="head-txt" style="text-decoration:none;color: rgb(245,158,11);">Login not sucessed.</h3>
-</div>';
-}
-?>
     <div style="padding-top: 200px;">
         <div class="form " style="max-width: 400px;min-height: 400px;justify-content: center;">
             <h2>Welcome Back!</h2>
@@ -91,7 +90,7 @@ if($showError){
     </div>
     <div class="login-signup-btn">
         <h2>Don't have an account!</h2>
-        <div style=> <button><a href="signup.php">SignUp</a></button></div>
+        <div style=> <button name="login"><a href="signup.php">SignUp</a></button></div>
     </div>
     <footer>
 
