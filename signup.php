@@ -1,24 +1,28 @@
 <?php
+require("db-connect.php");
 $showAlert=false;
 $showError=false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    include 'db-connect.php';
+   
     $username=$_POST["username"];
     $password=$_POST["password"];
     $email=$_POST["email"];
     $exists=false;
     if($exists==false && $password < 8){
-        $sql = "INSERT INTO `signup` ( `Username`, `password`, `email`) VALUES ('$username', '$password', '$email')";
-    $result = mysqli_query($conn,$sql);
+        $sql = "INSERT INTO registration( 'username', 'password', 'email') VALUES ('$username', '$password', '$email')";
+    $result = mysqli_query($con,$sql);
     if($result){
         $showAlert=true;
     }
     else{
         $showError="entry exists or requirements donot match!";
     }
+    header ("Location: login.php?status=success");
     }
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 
 <body style="background-image: url(images/bck3.jpg);background-repeat: no-repeat;background-size: 100% 100%;">
-    <?php require 'db-connect.php'?>
+    
    
     <nav>
 
@@ -66,11 +70,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div>
             <div class="form " style="max-width: 400px;min-height: 400px;">
                 <h2>Sign Up </h2>
-                <form class="register-form" action="signup.php" method="POST">
+                <form class="register-form" action="" method="post">
                     <input type="text " id="username" name="username" placeholder="name " />
                     <input type="password " id="password" name="password" placeholder="password " />
                     <input type="email" id="email" name="email" placeholder="email address " />
-                    <button >create</button>
+                    <button type="submit" name="signup" >create</button>
                 </form>
             </div>
         </div>
