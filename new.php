@@ -16,109 +16,76 @@
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
     <!--script-->
-    <script rel="javascript" src="JavaScript.js"></script>
 
 </head>
 
 <body>
-
     <!-- header section starts  -->
-
-    <nav>
-        
-</label>
-        <div class="topbar">
-
-            <div class="logo">
-
-                <p>TourNepal</p>
-            </div>
+    <header>
+        <div class="logo">
+            <a href="new.php">TourNepal</a>
         </div>
-
-
-        <div class="navbar" id="myTopnav">
-
-
-            <ul>
-                <li> <a href="new.php" class="bcgrnd-stay">Home</a></li>
-                <li> <a href="destination.php">Destination</a></li>
-                <li><a href="tours.php">Tours</a></li>
-                <li> <a href="story.php">Stories</a></li>
-                <li style="padding-right: 20px;"><a href="contacts.php ">Contact</a></li>
-                <li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login.php" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" >Login/SignUp</a></button></li>
+        <nav id="nav">
+            <a href="new.php">Home</a>
+            <a href="destination.php">Destination</a>
+            <a href="tours.php">Tours</a>
+            <a href="story.php">Stories</a>
+            <a href="contacts.php ">Contact</a>      
+            <a href="login.php" >Login/SignUp</a>
             </ul>
-
+        </nav>
+        <div class="hamburger">
+            <i class="fa fa-bars" id="hamburger"></i>
         </div>
+    </header>
 
-
-    </nav>
-    <div class="img-search ">
-        <img src="images/mountain1.jpg " width="1350px" text-align="center ">
+    <!-- nav ends here -->
+    <div class="landing">
         <div class="search-bar ">
-
-            <input type="text " placeholder="Search.. ">
+            <!-- <input type="text " placeholder="Search.. "> -->
             <p class="slogan ">explore beyond limits</p>
-
         </div>
+    </div>
 
-    </div><br><br>
-    <div class="topics " text-align="center ">
-        <p class="ant ">TOP PICKS</p>
+<!-- search section ends here -->
+    <div class="topics ">
+        <p class="ant "></i>TOP PICKS</p>
         <p class="common ">pick a destination</p>
     </div>
-
+    <div class="images">
+        <img class="image" src="images/lake.jpg">
+        <img class="image" src="images/farguuy.jpg">
+        <img class="image" src="images/forestTemple.jpg ">
+        <img class="image" src="images/forestTemple.jpg ">
+        <img class="image" src="images/lake.jpg">
+        <img class="image" src="images/farguuy.jpg">
+        <img class="image" src="images/forestTemple.jpg ">
+        <img class="image" src="images/forestTemple.jpg ">
+        
     </div>
 
-    <div class="images ">
-
-        <a href="Book.html"> <img src="images/farguuy.jpg " class="hey "></a>
 
 
-        <a href="Book.html"><img src="images/forestTemple.jpg " class="hey "></a>
-        <a href="Book.html"> <img src="images/bridge.jpg " class="hey "></a>
-        <a href="Book.html"><img src="images/dessert.jpg " class="hey "></a>
-        <a href="Book.html"> <img src="images/elephant.jpg " class="hey "></a>
-        <a href="Book.html"><img src="images/cap.jpg " class="hey "></a>
-        <a href="Book.html"><img src="images/temple.jpg " class="hey "></a>
-        <a href="Book.html"><img src="images/temple.jpg " class="hey "></a>
-
-    </div>
-    </div>
-    <div class="topics " align="center ">
-        <p class="ant ">TOP PICKS</p>
-        <p class="common ">pick a destination</p>
-    </div>
-    <div class="images ">
-        <img src="images/lake.jpg " class="hey ">
-        <img src="images/farguuy.jpg " class="hey ">
-        <img src="images/forestTemple.jpg " class="hey ">
-        <img src="images/bridge.jpg " class="hey ">
-        <img src="images/dessert.jpg " class="hey ">
-        <img src="images/elephant.jpg " class="hey ">
-        <img src="images/cap.jpg " class="hey ">
-        <img src="images/temple.jpg " class="hey ">
-
-    </div>
     <div class="topics " align="center ">
         <p class="ant ">HOT DEALS</p>
         <p class="common ">our best offer</p>
     </div>
     <div class="images ">
-        <img src="images/lake.jpg " class="hey ">
-        <img src="images/farguuy.jpg " class="hey ">
-        <img src="images/forestTemple.jpg " class="hey ">
-        <img src="images/bridge.jpg " class="hey ">
-        <img src="images/dessert.jpg " class="hey ">
-        <img src="images/elephant.jpg " class="hey ">
-        <img src="images/cap.jpg " class="hey ">
-        <img src="images/temple.jpg " class="hey ">
+        <img class="image" src="images/lake.jpg">
+        <img class="image" src="images/farguuy.jpg">
+        <img class="image" src="images/forestTemple.jpg ">
+        <img class="image" src="images/forestTemple.jpg ">
+        <img class="image" src="images/lake.jpg">
+        <img class="image" src="images/farguuy.jpg">
+        <img class="image" src="images/forestTemple.jpg ">
+        <img class="image" src="images/forestTemple.jpg ">
 
     </div>
     </div>
     <div>
     </div>
     <div class="share ">
-        <div>
+        <div class="share_info">
             <p class="hell ">Your story matters</p>
             <p class="heaven ">share it with us</p>
         </div>
@@ -144,10 +111,14 @@
         <p class="common ">best local destinations</p>
     </div>
     <div class="images ">
-        <img src="images/lake.jpg " class="hey ">
-        <img src="images/farguuy.jpg " class="hey ">
-        <img src="images/forestTemple.jpg " class="hey ">
-        <img src="images/bridge.jpg " class="hey ">
+        <img class="image" src="images/lake.jpg">
+        <img class="image" src="images/farguuy.jpg">
+        <img class="image" src="images/forestTemple.jpg ">
+        <img class="image" src="images/forestTemple.jpg ">
+        <img class="image" src="images/lake.jpg">
+        <img class="image" src="images/farguuy.jpg">
+        <img class="image" src="images/forestTemple.jpg ">
+        <img class="image" src="images/forestTemple.jpg ">
 
     </div>
     <div class="topics ">
@@ -214,6 +185,8 @@
 
     </footer>
 
+
+<script src="script.js"></script>
 
 </body>
 

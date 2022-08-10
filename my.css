@@ -1,770 +1,761 @@
-                            @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,800;1,400&family=Oleo+Script:wght@400;700&display=swap");
-                            * {
-                                margin: 0;
-                                padding: 0;
-                                box-sizing: border-box;
-                            }
-                            
-                            body {
-                                background-color: bisque;
-                                min-height: 100vh;
-                                overflow-x: hidden;
-                                scroll-behavior: smooth;
-                            }
-                            /*navigation bar section*/
-                            
-                            nav {
-                                background: rgb(0, 209, 199);
-                                padding: 0px 100px;
-                                width: 100%;
-                                line-height: 60px;
-                                position: fixed;
-                                z-index: 1;
-                            }
-                            
-                            nav .logo {
-                                padding-top: 20px;
-                            }
-                            
-                            nav .logo p {
-                                font-size: 1.6rem;
-                                font-weight: bolder;
-                                color: rgb(255, 255, 255);
-                                background-color: rgb(255, 153, 51);
-                                border-radius: 8px;
-                                float: left;
-                                letter-spacing: 1.5px;
-                                padding-left: 1%;
-                                padding-right: 1%;
-                            }
-                            
-                            nav ul li {
-                                list-style: none;
-                                text-align: right;
-                                display: inline;
-                            }
-                            /********************************************/
-                            /*************************************************************************/
-                            
-                            .checkbtn {
-                                font-size: 30px;
-                                color: white;
-                                float: right;
-                                line-height: 80px;
-                                margin-right: 40px;
-                                cursor: pointer;
-                            }
-                            
-                            #check {
-                                display: none;
-                            }
-                            
-                            @media(max-width:952px) {
-                                nav .logo {
-                                    font-size: 30px;
-                                    padding-left: 50px;
-                                }
-                                nav ul li a {
-                                    font-size: 16px;
-                                }
-                            }
-                            
-                            @media(max-width:858px) {
-                                .checkbtn {
-                                    display: block;
-                                }
-                                .navbar ul {
-                                    position: fixed;
-                                    width: 100%;
-                                    height: 100vh;
-                                    background: #fdf497;
-                                    top: 80px;
-                                    left: -100%;
-                                    transition: all .5s;
-                                    text-align: center;
-                                }
-                                nav ul li {
-                                    display: block;
-                                    margin: 50px 0;
-                                    line-height: 30px;
-                                }
-                                nav ul li a {
-                                    font-size: 20px;
-                                }
-                                a:hover,
-                                a.active {
-                                    background: none;
-                                    color: #fdf497;
-                                }
-                                #check:checked~ul {
-                                    left: 0;
-                                }
-                            }
-                            /*--------media query for nav bar-----------*/
-                            /*  @media screen and (max-width: 600px) {
-                                .navbar a {
-                                    font-size: 15px;
-                                    width: 50%;
-                                    display: block;
-                                    float: right;
-                                    text-align: center;
-                                }
-                                nav .logo p {
-                                    font-size: 1rem;
-                                }
-                                nav button {
-                                    display: none;
-                                }
-                                nav .rep-icon #menu-bars {
-                                    display: inline-block;
-                                }
-                            }
-                            /*login botton*/
-                            
-                            nav ul li button {
-                                font-size: 10%;
-                                border-radius: 8px;
-                                background-color: ghostwhite;
-                                padding: 5px;
-                                border: none;
-                                float: right;
-                            }
-                            
-                            .mybtn {
-                                position: absolute;
-                                top: 8px;
-                                right: 10px;
-                                padding-left: 20px;
-                            }
-                            
-                            .btntxt {
-                                font-size: 15px;
-                                font-family: 'Merriweather', serif;
-                            }
-                            
-                            nav ul li a {
-                                color: rgb(85, 61, 10);
-                                font-size: 1.4rem;
-                                margin: 0 0.6rem;
-                                text-decoration: solid;
-                                padding: 1%;
-                                font-family: "Quicksand", sans-serif;
-                                border-radius: 8px;
-                            }
-                            
-                            nav .navbar {
-                                text-align: right;
-                                padding-left: 25%;
-                                padding-top: 10px;
-                            }
-                            
-                            nav .navbar a:hover {
-                                color: rgb(187, 85, 2);
-                                background-color: #ece9e9;
-                            }
-                            
-                            .navbar ul li .bcgrnd-stay {
-                                background-color: antiquewhite;
-                            }
-                            /*search-bar*/
-                            
-                            .img-search {
-                                position: relative;
-                            }
-                            
-                            .search-bar {
-                                position: absolute;
-                                bottom: 25%;
-                                right: 35%;
-                            }
-                            
-                            .search-bar input {
-                                height: 40px;
-                                width: 400px;
-                                padding: 0px 10px;
-                                border-radius: 50px;
-                                ;
-                            }
-                            
-                            .slogan {
-                                font-family: "Oleo Script", cursive;
-                                color: #ffffff;
-                                font-size: 50px;
-                                padding-top: 50px;
-                            }
-                            /*formatting images*/
-                            
-                            .hey {
-                                height: 300px;
-                                width: 300px;
-                                object-fit: cover;
-                                object-position: center;
-                                padding-left: 40px;
-                                padding-top: 20px;
-                                padding-bottom: 20px;
-                            }
-                            
-                            .hey:hover {
-                                transform: scale(1.2);
-                                z-index: 2;
-                            }
-                            /*applying overlay to the first image from the galley*/
-                            /* .image {
-                                position: relative;
-                                margin-left: 70px;
-                                width: 300px;
-                                height: 300px;
-                            }
-                            
-                            .image__overlay {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 300px;
-                                height: 300px;
-                                background: rgba(0, 0, 0, 0.6);
-                                color: #ffffff;
-                                font-family: "Quicksand", sans-serif;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: center;
-                                justify-content: center;
-                                opacity: 0;
-                                transition: opacity 0.25s;
-                            }
-                            
-                            .image__overlay--blur {
-                                backdrop-filter: blur(5px);
-                            }
-                            
-                            .image__overlay--primary {
-                                background: #252518;
-                            }
-                            
-                            .image__overlay>* {
-                                transform: translateY(20px);
-                                transition: transform 0.25s;
-                            }
-                            
-                            .image__overlay:hover {
-                                opacity: 1;
-                            }
-                            
-                            .image__overlay:hover>* {
-                                transform: translateY(0);
-                            }
-                            
-                            .image__title {
-                                font-size: 2em;
-                                font-weight: bold;
-                            }
-                            
-                            .image__description {
-                                font-size: 1.25em;
-                                margin-top: 0.25em;
-                            }
-                            
-                            .image__img {
-                                display: block;
-                                width: 300px;
-                                height: 300px;
-                            }
-                            
-                            .momo {
-                                display: flexbox;
-                            }
-                            /*css in titles*/
-                            
-                            .ant {
-                                font-size: 60px;
-                                text-decoration: solid;
-                                text-align: center;
-                                font-weight: bolder;
-                                text-shadow: 15px;
-                                font-family: "Karla", sans-serif;
-                                color: rgb(28, 28, 46);
-                            }
-                            
-                            .common {
-                                font-size: 20px;
-                                text-decoration: wavy;
-                                text-align: center;
-                                font-family: "Oleo Script", cursive;
-                            }
-                            
-                            .topics {
-                                padding-top: 30px;
-                                padding-bottom: 30px;
-                            }
-                            
-                            .hell {
-                                font-size: 25px;
-                                font-weight: 900;
-                                font-family: "Quicksand", sans-serif;
-                                color: rgb(33, 22, 70);
-                            }
-                            
-                            .heaven {
-                                font-size: 20px;
-                                font-weight: 200;
-                                font-family: "Oleo Script", cursive;
-                                color: rgb(33, 22, 70);
-                                padding-left: 17%;
-                            }
-                            /*form sections*/
-                            
-                            .form h2 {
-                                padding-bottom: 10px;
-                            }
-                            
-                            .form {
-                                background: #ffffff;
-                                max-width: 360px;
-                                margin: 0 auto 100px;
-                                padding: 45px;
-                                text-align: center;
-                                box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-                            }
-                            
-                            .form input {
-                                font-family: "Roboto", sans-serif;
-                                outline: 0;
-                                background: #f2f2f2;
-                                width: 100%;
-                                border: 0;
-                                margin: 0 0 15px;
-                                padding: 15px;
-                                box-sizing: border-box;
-                                font-size: 14px;
-                            }
-                            
-                            .form button {
-                                font-family: "Roboto", sans-serif;
-                                text-transform: uppercase;
-                                outline: 0;
-                                background: #4caf50;
-                                width: 100%;
-                                border: 0;
-                                padding: 15px;
-                                color: #ffffff;
-                                font-size: 14px;
-                                -webkit-transition: all 0.3 ease;
-                                transition: all 0.3 ease;
-                                cursor: pointer;
-                            }
-                            
-                            .form button:hover {
-                                background: #43a047;
-                            }
-                            
-                            .share {
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-around;
-                                padding-top: 50px;
-                                padding-left: 50px;
-                                padding-right: 50px;
-                            }
-                            
-                            .arrow {
-                                width: 5rem;
-                                opacity: 0.5;
-                            }
-                            /*what people say section*/
-                            
-                            .about-us {
-                                display: flex;
-                                align-items: center;
-                                padding: 30px;
-                            }
-                            
-                            .svg_aboutus {
-                                opacity: 0.5;
-                                width: 1.5rem;
-                                padding-top: 20px;
-                                display: block;
-                                margin-left: auto;
-                                margin-right: auto;
-                            }
-                            
-                            .pplsay {
-                                text-align: center;
-                                font-size: 20px;
-                            }
-                            /*footer section*/
-                            
-                            footer {
-                                background-color: rgb(50, 218, 201);
-                                width: 100%;
-                                line-height: 20px;
-                            }
-                            
-                            .foot-logo h3 {
-                                color: rgb(250, 250, 250);
-                                float: left;
-                                letter-spacing: 1.5px;
-                                padding-top: 40px;
-                                padding-bottom: 20px;
-                                padding-left: 70px;
-                            }
-                            
-                            .foot-logo h3 p {
-                                justify-content: center;
-                                background-color: rgb(255, 153, 51);
-                                width: 110%;
-                                padding-left: 20px;
-                                border-radius: 8px;
-                            }
-                            
-                            footer h4 {
-                                padding-top: 40px;
-                                padding-bottom: 20px;
-                                padding-left: 210px;
-                            }
-                            /*icons in footer*/
-                            
-                            .fa-facebook {
-                                background: blue;
-                                color: white;
-                                width: 30px;
-                                height: 30px;
-                                padding: 10px;
-                                font-size: 20px;
-                            }
-                            
-                            .fa-twitter {
-                                background: white;
-                                background: blue;
-                                color: white;
-                                width: 30px;
-                                height: 30px;
-                                padding: 10px;
-                                font-size: 20px;
-                            }
-                            
-                            .fa-instagram {
-                                background: #d6249f;
-                                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-                                color: white;
-                                width: 30px;
-                                height: 30px;
-                                padding: 10px;
-                                font-size: 20px;
-                            }
-                            
-                            .fa-linkedin {
-                                background: rgb(75, 119, 214);
-                                color: white;
-                                width: 30px;
-                                height: 30px;
-                                padding: 10px;
-                                font-size: 20px;
-                            }
-                            
-                            footer .foot-icon {
-                                position: flex;
-                                margin-left: 80%
-                            }
-                            /*------Book now page -------*/
-                            
-                            .booknow-head {
-                                padding-top: 100px;
-                                font-family: Arial, Helvetica, sans-serif;
-                                text-decoration: none;
-                                text-align: center;
-                                background-color: #f2f2f2;
-                            }
-                            
-                            .booknow-head a:hover {
-                                background-color: rgb(238, 185, 115);
-                            }
-                            
-                            .booknow-head .head-txt {
-                                padding-top: 30px;
-                                padding-bottom: 30px;
-                                font-size: 25px;
-                                text-decoration: none;
-                            }
-                            
-                            .book-img img {
-                                border-radius: 12px;
-                                position: relative;
-                                left: 10%;
-                                margin-top: 3%;
-                            }
-                            
-                            .book-info h3 {
-                                position: relative;
-                                float: right;
-                                margin-top: -26%;
-                                padding-right: 30%;
-                                font-family: 'Roboto', sans-serif;
-                                font-size: 20px;
-                            }
-                            
-                            .book-info p {
-                                position: relative;
-                                float: right;
-                                padding-left: 50%;
-                                margin-right: 15%;
-                                margin-top: -23%;
-                                font-size: 20px;
-                                font-family: 'BIZ UDMincho', serif;
-                            }
-                            
-                            .book-info hr {
-                                width: 35%;
-                                height: 2px;
-                                margin-left: 50%;
-                                margin-top: 2%;
-                                color: black;
-                                border: rgb(0, 0, 0);
-                                border-style: inset;
-                                border-width: 0.5px;
-                                opacity: 0.5;
-                            }
-                            /*button*/
-                            
-                            .book-info button {
-                                position: relative;
-                                margin-left: 78%;
-                                margin-bottom: 10%;
-                                background-color: rgb(245, 158, 11);
-                                padding: 10px;
-                                border: none;
-                                border-radius: 8px;
-                                text-decoration: white;
-                            }
-                            
-                            .book-info button:hover {
-                                background-color: aquamarine;
-                            }
-                            
-                            .book-info button b {
-                                color: white;
-                                font-size: 15px;
-                            }
-                            
-                            .price-button {
-                                display: flexbox;
-                            }
-                            /*--------------Error page---------------------*/
-                            
-                            * {
-                                -webkit-box-sizing: border-box;
-                                box-sizing: border-box;
-                            }
-                            
-                            body {
-                                padding: 0;
-                                margin: 0;
-                            }
-                            
-                            #notfound {
-                                position: relative;
-                                height: 100vh;
-                            }
-                            
-                            #notfound .notfound {
-                                position: absolute;
-                                left: 50%;
-                                top: 50%;
-                                -webkit-transform: translate(-50%, -50%);
-                                -ms-transform: translate(-50%, -50%);
-                                transform: translate(-50%, -50%);
-                            }
-                            
-                            .notfound {
-                                max-width: 520px;
-                                width: 100%;
-                                line-height: 1.4;
-                                text-align: center;
-                            }
-                            
-                            .notfound .notfound-404 {
-                                position: relative;
-                                height: 200px;
-                                margin: 0px auto 20px;
-                                z-index: -1;
-                            }
-                            
-                            .notfound .notfound-404 h1 {
-                                font-family: 'Montserrat', sans-serif;
-                                font-size: 236px;
-                                font-weight: 200;
-                                margin: 0px;
-                                color: #211b19;
-                                text-transform: uppercase;
-                                position: absolute;
-                                left: 50%;
-                                top: 50%;
-                                -webkit-transform: translate(-50%, -50%);
-                                -ms-transform: translate(-50%, -50%);
-                                transform: translate(-50%, -50%);
-                            }
-                            
-                            .notfound .notfound-404 h2 {
-                                font-family: 'Montserrat', sans-serif;
-                                font-size: 28px;
-                                font-weight: 400;
-                                text-transform: uppercase;
-                                color: #211b19;
-                                background: #fff;
-                                padding: 10px 5px;
-                                margin: auto;
-                                display: inline-block;
-                                position: absolute;
-                                bottom: 0px;
-                                left: 0;
-                                right: 0;
-                            }
-                            
-                            .notfound a {
-                                font-family: 'Montserrat', sans-serif;
-                                display: inline-block;
-                                font-weight: 700;
-                                text-decoration: none;
-                                color: #fff;
-                                text-transform: uppercase;
-                                padding: 13px 23px;
-                                background: #ff6300;
-                                font-size: 18px;
-                                -webkit-transition: 0.2s all;
-                                transition: 0.2s all;
-                            }
-                            
-                            .notfound a:hover {
-                                color: #ff6300;
-                                background: #211b19;
-                            }
-                            
-                            @media only screen and (max-width: 767px) {
-                                .notfound .notfound-404 h1 {
-                                    font-size: 148px;
-                                }
-                            }
-                            
-                            @media only screen and (max-width: 480px) {
-                                .notfound .notfound-404 {
-                                    height: 148px;
-                                    margin: 0px auto 10px;
-                                }
-                                .notfound .notfound-404 h1 {
-                                    font-size: 86px;
-                                }
-                                .notfound .notfound-404 h2 {
-                                    font-size: 16px;
-                                }
-                                .notfound a {
-                                    padding: 7px 15px;
-                                    font-size: 14px;
-                                }
-                            }
-                            /*-----------------------*/
-                            /*------ssignup and login page------*/
-                            
-                            .form .register-form button {
-                                background-color: rgb(245, 158, 11);
-                                transition: ease-out 0.5s;
-                            }
-                            
-                            .form .register-form button:hover {
-                                box-shadow: inset 30rem 0 0 0 #7fffd4;
-                            }
-                            
-                            .login-signup-btn button:hover {
-                                box-shadow: inset 30rem 0 0 0 #7fffd4;
-                            }
-                            
-                            .login-signup-btn {
-                                text-align: center;
-                                padding-bottom: 200px;
-                            }
-                            
-                            .login-signup-btn h2 {
-                                padding-top: 70px;
-                                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                                font-size: 35px;
-                                color: rgb(241, 239, 239);
-                            }
-                            
-                            .login-signup-btn div {
-                                padding-top: 40px;
-                            }
-                            
-                            .login-signup-btn div button {
-                                width: 120px;
-                                padding: 10px;
-                                border: none;
-                                border-radius: 12px;
-                                background-color: rgb(245, 158, 11);
-                            }
-                            
-                            .login-signup-btn div button a {
-                                color: azure;
-                                text-decoration: solid;
-                                font-size: 20px;
-                                font-family: 'Libre Baskerville', serif;
-                                font-weight: 700;
-                            }
-                            
-                            .login-body {
-                                background-image: url(images/mybck.jpg);
-                                background-repeat: no-repeat;
-                                background-size: 100% 100%;
-                            }
-                            
-                            .logged-in {
-                                padding-top: 100px;
-                                font-family: Arial, Helvetica, sans-serif;
-                                text-decoration: none;
-                                text-align: center;
-                                background-color: #f2f2f2;
-                            }
-                            /*--------------Tours page----------------------*/
-                            
-                            div.gallery {
-                                margin: 5px;
-                                border: 1px solid rgb(221, 193, 193);
-                                float: left;
-                                width: 250px;
-                            }
-                            
-                            div.gallery:hover {
-                                border: 1px solid rgb(179, 163, 28);
-                            }
-                            
-                            div.gallery img {
-                                width: 100%;
-                                height: auto;
-                            }
-                            
-                            div.desc {
-                                padding: 15px;
-                                text-align: center;
-                                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                                font-size: 15px;
-                                color: rgb(121, 114, 114);
-                            }
-                            
-                            div .desc h3:hover {
-                                color: #918612;
-                            }
-                            
-                            div .content {
-                                display: flex;
-                                margin-bottom: px;
-                            }
-                            
-                            div.desc h3 a {
-                                padding: 15px;
-                                text-align: center;
-                                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                                font-size: 15px;
-                                color: rgb(121, 114, 114);
-                                text-decoration: none;
-                            }
-                            
-                            div .desc h3 a:hover {
-                                color: #918612;
-                            }
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,800;1,400&family=Oleo+Script:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', Courier, monospace;
+}
+
+body {
+    background-color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+.hamburger{
+    display: none;
+}
+.hamburger i{
+    font-size: 2rem;
+}
+
+.fa-bars{
+    color: white;
+    size: 1.5rem;
+}
+
+/*navigation bar section*/
+
+header {
+    height: 10vh;
+    width: 100%;
+    padding: 0% 5%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav a {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0.5rem;
+    color: white;
+}
+
+
+
+
+    .nav_active{
+        display: none!important;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        background-color: black;
+    }
+    .nav_a_active{
+        display: grid;
+        text-align: center;
+        background-color: darkred;
+        margin: 0;
+    }
+
+
+
+
+
+/*search section*/
+.landing {
+    height: 90vh;
+    background-image: url(images/sagarmatha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-search {
+    position: relative;
+}
+
+.search-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*.search-bar input {
+    height: 40px;
+    padding: 0px 10px;
+    border-radius: 50px;
+}*/
+
+.slogan {
+    font-family: "Oleo Script", cursive;
+    color: #ffffff;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+
+
+/*top picks starts here*/
+.images {
+    width: 100%;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.image {
+    height: 350px;
+    width: 325px;
+    object-fit: cover;
+    padding: 10px;
+}
+
+/*share*/
+.share {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.arrow {
+    width: 5rem;
+    opacity: 0.5;
+}
+
+.hell {
+    font-size: 25px;
+    font-weight: 900;
+    font-family: "Quicksand", sans-serif;
+    color: rgb(33, 22, 70);
+}
+
+.heaven {
+    font-size: 20px;
+    font-weight: 200;
+    font-family: "Oleo Script", cursive;
+    color: rgb(33, 22, 70);
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1024px) {
+    header nav a {
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem 0.5rem;
+    color: white;
+}
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    nav{
+        display: block!important;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        background-color: black;
+    }
+    nav a{
+        display: grid;
+        text-align: center;
+        background-color: darkred;
+        margin: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .hamburger{
+        display: block;
+    }
+    .fa-bars{
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+    .images {
+        grid-template-columns: 1fr !important;
+    }
+
+
+    .share {
+        display: grid !important;
+    }
+
+    .share_info {
+        text-align: center;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .login-page {
+        padding-top: 2rem;
+    }
+
+    .about-us {
+        display: grid !important;
+    }
+}
+
+
+
+
+
+
+/********************************************/
+/*************************************************************************/
+
+
+
+/*search-bar*/
+
+
+
+
+
+/*formatting images*/
+
+
+
+
+
+.ant {
+    font-size: 60px;
+    text-decoration: solid;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 15px;
+    font-family: "Karla", sans-serif;
+    color: rgb(28, 28, 46);
+}
+
+.common {
+    font-size: 20px;
+    text-decoration: wavy;
+    text-align: center;
+    font-family: "Oleo Script", cursive;
+}
+
+.topics {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+/*form sections*/
+
+.form h2 {
+    padding-bottom: 10px;
+}
+
+.form {
+    background: #ffffff;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4caf50;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background: #43a047;
+}
+
+.share {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+
+/*what people say section*/
+
+.about-us {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.svg_aboutus {
+    opacity: 0.5;
+    width: 1.5rem;
+    padding-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pplsay {
+    text-align: center;
+    font-size: 20px;
+}
+
+/*footer section*/
+
+footer {
+    background-color: rgb(50, 218, 201);
+    width: 100%;
+    line-height: 20px;
+}
+
+.foot-logo h3 {
+    color: rgb(250, 250, 250);
+    float: left;
+    letter-spacing: 1.5px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 70px;
+}
+
+.foot-logo h3 p {
+    justify-content: center;
+    background-color: rgb(255, 153, 51);
+    width: 110%;
+    padding-left: 20px;
+    border-radius: 8px;
+}
+
+footer h4 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 210px;
+}
+
+/*icons in footer*/
+
+.fa-facebook {
+    background: blue;
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.fa-twitter {
+    background: white;
+    background: blue;
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.fa-instagram {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.fa-linkedin {
+    background: rgb(75, 119, 214);
+    color: white;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+footer .foot-icon {
+    position: flex;
+    margin-left: 80%
+}
+
+/*------Book now page -------*/
+
+.booknow-head {
+    padding-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.booknow-head a:hover {
+    background-color: rgb(238, 185, 115);
+}
+
+.booknow-head .head-txt {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.book-img img {
+    border-radius: 12px;
+    position: relative;
+    left: 10%;
+    margin-top: 3%;
+}
+
+.book-info h3 {
+    position: relative;
+    float: right;
+    margin-top: -26%;
+    padding-right: 30%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.book-info p {
+    position: relative;
+    float: right;
+    padding-left: 50%;
+    margin-right: 15%;
+    margin-top: -23%;
+    font-size: 20px;
+    font-family: 'BIZ UDMincho', serif;
+}
+
+.book-info hr {
+    width: 35%;
+    height: 2px;
+    margin-left: 50%;
+    margin-top: 2%;
+    color: black;
+    border: rgb(0, 0, 0);
+    border-style: inset;
+    border-width: 0.5px;
+    opacity: 0.5;
+}
+
+/*button*/
+
+.book-info button {
+    position: relative;
+    margin-left: 78%;
+    margin-bottom: 10%;
+    background-color: rgb(245, 158, 11);
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: white;
+}
+
+.book-info button:hover {
+    background-color: aquamarine;
+}
+
+.book-info button b {
+    color: white;
+    font-size: 15px;
+}
+
+.price-button {
+    display: flexbox;
+}
+
+/*--------------Error page---------------------*/
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#notfound {
+    position: relative;
+    height: 100vh;
+}
+
+#notfound .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.notfound {
+    max-width: 520px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.notfound .notfound-404 {
+    position: relative;
+    height: 200px;
+    margin: 0px auto 20px;
+    z-index: -1;
+}
+
+.notfound .notfound-404 h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 236px;
+    font-weight: 200;
+    margin: 0px;
+    color: #211b19;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.notfound .notfound-404 h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #211b19;
+    background: #fff;
+    padding: 10px 5px;
+    margin: auto;
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+}
+
+.notfound a {
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 13px 23px;
+    background: #ff6300;
+    font-size: 18px;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+}
+
+.notfound a:hover {
+    color: #ff6300;
+    background: #211b19;
+}
+
+@media only screen and (max-width: 767px) {
+    .notfound .notfound-404 h1 {
+        font-size: 148px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .notfound .notfound-404 {
+        height: 148px;
+        margin: 0px auto 10px;
+    }
+
+    .notfound .notfound-404 h1 {
+        font-size: 86px;
+    }
+
+    .notfound .notfound-404 h2 {
+        font-size: 16px;
+    }
+
+    .notfound a {
+        padding: 7px 15px;
+        font-size: 14px;
+    }
+}
+
+/*-----------------------*/
+/*------ssignup and login page------*/
+
+.form .register-form button {
+    background-color: rgb(245, 158, 11);
+    transition: ease-out 0.5s;
+}
+
+.form .register-form button:hover {
+    box-shadow: inset 30rem 0 0 0 #7fffd4;
+}
+
+.login-signup-btn button:hover {
+    box-shadow: inset 30rem 0 0 0 #7fffd4;
+}
+
+.login-signup-btn {
+    text-align: center;
+    padding-bottom: 200px;
+}
+
+.login-signup-btn h2 {
+    padding-top: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 35px;
+    color: rgb(241, 239, 239);
+}
+
+.login-signup-btn div {
+    padding-top: 40px;
+}
+
+.login-signup-btn div button {
+    width: 120px;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(245, 158, 11);
+}
+
+.login-signup-btn div button a {
+    color: azure;
+    text-decoration: solid;
+    font-size: 20px;
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+}
+
+.login-body {
+    background-image: url(images/mybck.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.logged-in {
+    padding-top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+/*--------------Tours page----------------------*/
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid rgb(221, 193, 193);
+    float: left;
+    width: 250px;
+}
+
+div.gallery:hover {
+    border: 1px solid rgb(179, 163, 28);
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    color: rgb(121, 114, 114);
+}
+
+div .desc h3:hover {
+    color: #918612;
+}
+
+div .content {
+    display: flex;
+    margin-bottom: px;
+}
+
+div.desc h3 a {
+    padding: 15px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    color: rgb(121, 114, 114);
+    text-decoration: none;
+}
+
+div .desc h3 a:hover {
+    color: #918612;
+}

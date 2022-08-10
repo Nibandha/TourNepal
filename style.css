@@ -69,6 +69,7 @@ body {
 nav {
     background: rgb(0, 209, 199);
     padding: 0px 100px;
+    height: 10vh;
     width: 100%;
     line-height: 60px;
     position: fixed;
