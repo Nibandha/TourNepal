@@ -1,3 +1,9 @@
+<?php 
+session_start ();
+if(!isset($_SESSION["login_session"]))
+
+	header("location:login.php"); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,10 +13,11 @@
     <title>BookNow</title>
 
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- custom css file link  -->
     <link rel="stylesheet" href="my.css">
     <!--custom js file link-->
+    
 
 
 </head>
@@ -38,7 +45,17 @@
                 <li> <a href="story.php">Stories</a></li>
                 <li style="padding-right: 20px;"><a href="contacts.php">Contact</a></li>
 
-                <li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login.php" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" >Login/SignUp</a></button></li>
+                <?php 
+               
+if(isset($_SESSION["login_session"])){
+echo'<li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="logout.php" style="font-family:Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;" >LogOut</a></button></li>';
+}
+?>
+             <?php 
+if(!isset($_SESSION["login_session"])){
+echo'<li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login.php" style="font-family:Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;" >Login/SignUp</a></button></li>';
+}
+?>
             </ul>
 
         </div>
@@ -46,14 +63,23 @@
 
     </nav>
     <div class="booknow-head">
-        <a href="new.html" style="text-decoration: none;color: rgb(105, 91, 91);">
+        <a href="new.php" style="text-decoration: none;color: rgb(105, 91, 91);">
             <h3 class="head-txt" style="text-decoration:none;color: rgb(245,158,11);">Home</a> / Book now</h3>
     </div>
     <div class="book-content">
         <div class="book-img">
-            <img src="images/widebuilding.jpg" width=400px height="350px">
+        
+          <img src="images/widebuilding.jpg" width=400px height="350px"> 
 
         </div>
+        <div class="tour_info"><div class="row">
+                          
+                  <div class="col-md-6 trip-info_text">
+                          <span class="trip-info_title">
+                          <i class="fas fa-bed"></i>&nbsp; Accomodation :
+                            </span>
+                                    <span>Hotel/Tea House</span>
+                                </div></div>
         <div class="book-info">
             <h3>Janakpur Tour</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam illum fuga reprehenderit cupiditate velit tempore dolorum assumenda ipsam eveniet, quibusdam doloribus, quidem quia unde odio fugiat id ea magni nobis sit aut repellendus
@@ -66,7 +92,7 @@
             <div class="price-button">
                 <h2 style="margin-left: 50%;padding-top:2%;width:20px;">$999
                 </h2>
-                <button><b>Book Now</b></button>
+                <button><b><a href="bookform.php" style="text-decoration:none;color:white;">Book Now</b></a></button>
             </div>
 
         </div>

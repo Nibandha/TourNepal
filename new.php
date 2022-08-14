@@ -1,5 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include "db-connect.php";
+
+if(isset($_POST['signup'])){
+    
+    $username=$_POST["username"];
+    $password=$_POST["password"];
+    $email=$_POST["email"];
+    $sql=mysqli_query($con,"SELECT * FROM register where email= '$email'");
+    if(mysqli_num_rows($sql)>0)
+    {
+        echo "Email Id Already Exists"; 
+        header("location: signup.php");
+        exit;
+    }
+    else{
+    
+        $sql = "INSERT INTO `register`( username, password, email) VALUES ('$username', '$password', '$email')";
+    $result = mysqli_query($con,$sql);
+    if($result){
+        header("location: login.php");
+    }
+    else{
+        die(mysqli_error($con));
+    }
+    }
+}   
+
+?>
+<!DOCTYPE php>
+<php lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +45,17 @@
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
     <!--script-->
-    <script rel="javascript" src="JavaScript.js"></script>
+    <script rel="javascript" >
+    function disable() {
+    var myInput = document.getElementById("myInput");
+    if (!myInput.value.length) {
+        window.location = 'new.php';
+        return;
+    }
+    window.location = 'book.php';
+  
+}
+</script>
 
 </head>
 
@@ -45,21 +84,29 @@
                 <li><a href="tours.php">Tours</a></li>
                 <li> <a href="story.php">Stories</a></li>
                 <li style="padding-right: 20px;"><a href="contacts.php ">Contact</a></li>
-                <li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login.php" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;" >Login/SignUp</a></button></li>
+                <?php 
+                session_start();
+if(isset($_SESSION["login_session"])){
+echo'<li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="logout.php" style="font-family:Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;" >LogOut</a></button></li>';
+}
+?>
+             <?php 
+if(!isset($_SESSION["login_session"])){
+echo'<li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login.php" style="font-family:Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;" >Login/SignUp</a></button></li>';
+}
+?>
             </ul>
 
         </div>
 
 
     </nav>
-    <div class="img-search ">
-        <img src="images/mountain1.jpg " width="1350px" text-align="center ">
+    <div class="landing">
         <div class="search-bar ">
-
-            <input type="text " placeholder="Search.. ">
-            <p class="slogan ">explore beyond limits</p>
-
+        <input type="text " placeholder="Search.. " id="myInput" ><button onclick="disable()" >Search</button>
+            <p class="slogan ">Explore beyond limits</p>
         </div>
+    </div>
 
     </div><br><br>
     <div class="topics " text-align="center ">
@@ -71,32 +118,37 @@
 
     <div class="images ">
 
-        <a href="Book.html"> <img src="images/farguuy.jpg " class="hey "></a>
-
-
-        <a href="Book.html"><img src="images/forestTemple.jpg " class="hey "></a>
-        <a href="Book.html"> <img src="images/bridge.jpg " class="hey "></a>
-        <a href="Book.html"><img src="images/dessert.jpg " class="hey "></a>
-        <a href="Book.html"> <img src="images/elephant.jpg " class="hey "></a>
-        <a href="Book.html"><img src="images/cap.jpg " class="hey "></a>
-        <a href="Book.html"><img src="images/temple.jpg " class="hey "></a>
-        <a href="Book.html"><img src="images/temple.jpg " class="hey "></a>
+        <?php
+       include 'myadmin/uploadphp.php';
+        $query = " SELECT * from packages ";
+        $result = mysqli_query($con, $query);
+ 
+        while ($data = mysqli_fetch_assoc($result)) {
+        ?>
+           <a href="Book.php"> <img class="hey" src="images/<?php echo $data['file_nam']; ?>"></a>
+ 
+        <?php
+        }
+        ?>
 
     </div>
     </div>
     <div class="topics " align="center ">
-        <p class="ant ">TOP PICKS</p>
+        <p class="ant ">SEASONAL PICKS</p>
         <p class="common ">pick a destination</p>
     </div>
-    <div class="images ">
-        <img src="images/lake.jpg " class="hey ">
-        <img src="images/farguuy.jpg " class="hey ">
-        <img src="images/forestTemple.jpg " class="hey ">
-        <img src="images/bridge.jpg " class="hey ">
-        <img src="images/dessert.jpg " class="hey ">
-        <img src="images/elephant.jpg " class="hey ">
-        <img src="images/cap.jpg " class="hey ">
-        <img src="images/temple.jpg " class="hey ">
+    <div class="images">
+    <a href="Book.php">  <img src="images/lake.jpg " class="hey "></a>
+    <a href="Book.php">  <img src="images/farguuy.jpg " class="hey "></a>
+    <a href="Book.php"> <img src="images/forestTemple.jpg " class="hey "></a>
+    <a href="Book.php">  <img src="images/bridge.jpg " class="hey "></a>
+    <a href="Book.php">  <img src="images/dessert.jpg " class="hey "></a>
+    <a href="Book.php">  <img src="images/elephant.jpg " class="hey "></a>
+    <a href="Book.php">  <img src="images/cap.jpg " class="hey "></a>
+    <a href="Book.php">  <img src="images/temple.jpg " class="hey "></a>  
+        
+    </div>
+
 
     </div>
     <div class="topics " align="center ">
@@ -124,19 +176,32 @@
         </div>
         <svg class="arrow " fill="currentColor " viewBox="0 0 20 20 " xmlns="http://www.w3.org/2000/svg "><path fill-rule="evenodd " d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1
                     1 0 010-1.414z " clip-rule="evenodd "></path></svg>
-
-        <div class="login-page ">
-
+<?php 
+if(!isset($_SESSION["login_session"])){
+echo '<div class="login-page ">
             <div class="form ">
                 <h2>Sign Up </h2>
-                <form class="register-form ">
-                    <input type="text " placeholder="name " />
-                    <input type="password " placeholder="password " />
-                    <input type="text " placeholder="email address " />
-                    <button>create</button>
+                <form class="register-form " method="POST">
+                    <input type="text " id="username" name="username" placeholder="name " />
+                    <input type="password " id="password" name="password" placeholder="password " />
+                    <input type="text " id="email" name="email" placeholder="email address " />
+                    <button type="submit" name="signup" >create</button>
                 </form>
             </div>
-        </div>
+        </div>';}
+        ?>
+        <?php 
+if(isset($_SESSION["login_session"])){
+echo '
+<div class="login-page ">
+            <div class="form ">
+                
+                <form class="register-form " >
+                    
+                <button><a href="contacts.php" style="text-decoration:none;color:white;"> Message Us</button></a>
+                </form>
+            </div>
+        </div>';}?>
 
     </div>
     <div class="topics " align="center ">
@@ -210,11 +275,11 @@
         </div>
 
 
-        </div>
+        
 
     </footer>
 
 
 </body>
 
-</html>
+</php>
