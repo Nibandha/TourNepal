@@ -537,31 +537,53 @@ footer .foot-icon {
     text-decoration: none;
 }
 
-.book-img img {
-    border-radius: 12px;
-    position: relative;
-    left: 10%;
-    margin-top: 3%;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+.book_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3rem;
+    font-family: 'Poppins', sans-serif;
+
+}
+.book_container .book_left {
+    /*text-align: center;*/
+}
+.book_container img{
+    height: 400px;
+    width: 70%;
+    object-fit: cover;
+    text-align: initial;
+    border-radius: 1rem;
+    margin:  2rem 3rem 0rem 3rem;
+}
+.book_left_card{
+    padding: 2rem;
+    /*background-color: white;*/
+}
+.book_left_card_top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.book_left_card h3{
+    text-align: left;
+    padding: 1rem;
 }
 
-.book-info h3 {
-    position: relative;
-    float: right;
-    margin-top: -26%;
-    padding-right: 30%;
-    font-family: "Roboto", sans-serif;
+.book_right{
+    padding: 1rem;
+    padding-right: 15%;
+}
+.book_right h3{
+    padding: 1rem 0rem;
+    font-size: 2rem;
+}
+.book_right p{
+    line-height: 2rem;
     font-size: 20px;
+    text-align: justify;
 }
 
-.book-info p {
-    position: relative;
-    float: right;
-    padding-left: 50%;
-    margin-right: 15%;
-    margin-top: -23%;
-    font-size: 20px;
-    font-family: "BIZ UDMincho", serif;
-}
+
 
 .book-info hr {
     width: 35%;
@@ -574,11 +596,8 @@ footer .foot-icon {
     border-width: 0.5px;
     opacity: 0.5;
 }
-
-
-/*button*/
-
-.book-info button {
+.price-button button {
+    margin-top: 2%;
     position: relative;
     margin-left: 78%;
     margin-bottom: 10%;
@@ -589,19 +608,37 @@ footer .foot-icon {
     text-decoration: white;
 }
 
-.book-info button:hover {
+.price-button button:hover {
     background-color: aquamarine;
 }
 
-.book-info button b {
+.price-button button b {
     color: white;
     font-size: 15px;
 }
 
 .price-button {
-    display: flexbox;
+    display: flex;
 }
 
+
+
+/*
+.price-button {
+    margin-top: 2rem;
+}
+
+.price-button h2{
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.price-button a{
+    margin: 2rem;
+    padding: 1rem;
+    background-color: white;
+    color: red;
+}*/
 
 /*--------------Error page---------------------*/
 
