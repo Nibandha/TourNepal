@@ -32,7 +32,17 @@
                 <li><a href="tours.php">Tours</a></li>
                 <li> <a href="story.php" class="bcgrnd-stay">Stories</a></li>
                 <li style="padding-right: 20px;"><a href="contacts.php ">Contact</a></li>
-                <li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login.php"  style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Login/SignUp</a></button></li>
+                <?php 
+                session_start();
+if(isset($_SESSION["login_session"])){
+echo'<li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="logout.php" style="font-family:Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;" >LogOut</a></button></li>';
+}
+?>
+             <?php 
+if(!isset($_SESSION["login_session"])){
+echo'<li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login.php" style="font-family:Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;" >Login/SignUp</a></button></li>';
+}
+?>
             </ul>
 
         </div>
@@ -46,10 +56,10 @@
 
         <div class="row">
             <div class="picks-col">
-                <img src="images/beach.jpg">
+                <img src="images/janakii mandir.jpeg">
 
-                <h3>HIGH</h3>
-                <p class="story-info">look down on the valley of kathmandu from high altitude.</p>
+                <h3>TEMPLE</h3>
+                <p class="story-info">Some refer to it as a cultural Chernobyl. I think of it as a cultural Stalingrad..</p>
 
                 <i class="fa fa-eye"></i>
                 <i class="fa fa-comment"></i>
@@ -58,8 +68,8 @@
             <div class="picks-col">
                 <img src="images/hands.jpg">
 
-                <h3>TALL</h3>
-                <p class="story-info">Roam in awe beneath the Bagmati bridge,an engineering wonder of the 21st century.</p>
+                <h3>NATURE</h3>
+                <p class="story-info">You grow accustomed to being in beautiful places and doing incredible things when you travel.</p>
                 <i class="fa fa-eye"></i>
                 <i class="fa fa-comment"></i>
             </div>
@@ -80,8 +90,8 @@
             <div class="picks-col">
                 <img src="images/man.jpg">
 
-                <h3>HIGH</h3>
-                <p class="story-info">look down on the valley of kathmandu from high altitude.</p>
+                <h3>ADVENTURE</h3>
+                <p class="story-info">If you are unhappy with it, stop doing it.If you are dreaming about it, do it</p>
                 <i class="fa fa-eye"></i>
                 <i class="fa fa-comment"></i>
             </div>
@@ -89,17 +99,17 @@
             <div class="picks-col">
                 <img src="images/happygirls.jpg">
 
-                <h3>TALL</h3>
-                <p class="story-info">Roam in awe beneath the Bagmati bridge,an engineering wonder of the 21st century.</p>
+                <h3>HOLIDAYS</h3>
+                <p class="story-info">Who doesn’t love being on vacation? The best memories, and the best pictures, happen when you are on a getaway.</p>
                 <i class="fa fa-eye"></i>
                 <i class="fa fa-comment"></i>
             </div>
 
             <div class="picks-col">
-                <img src="images/selfie.jpg">
+                <img src="images/Food.jpg">
 
-                <h3>ENDANGERED</h3>
-                <P class="story-info">Visit all the places filled with nature meeting endangered species.</P>
+                <h3>FOOD</h3>
+                <P class="story-info">Don’t travel just to see.Travel to try, listen, feel, taste.That way there won’t be any place you cannot find beauty.</P>
                 <i class="fa fa-eye"></i>
                 <i class="fa fa-comment"></i>
             </div>

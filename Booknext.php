@@ -74,12 +74,12 @@ echo'<li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login
     <div class="book_container">
         <div class="book_left">
             <div>
-                <img src="images/janakii mandir.jpeg">
+                <img src="images/lumbini.jpg">
                 <div class="book_left_card">
                     <div class="book_left_card_top">
                         <div>
                             <h3>
-                                <i class="fas fa-bed"></i><span> Accomodation : Hotel/2-breakfast/2-lunch/1-dinner</span>
+                                <i class="fas fa-bed"></i><span> Accomodation : Hotel/2-breakfast/3-lunch/2-dinner</span>
                             </h3>
                             <h3>
                                 <i class="fas fa-mountain"></i><span> Grading : Moderate</span>
@@ -90,10 +90,10 @@ echo'<li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login
                         </div>
                         <div>
                             <h3>
-                                <i class="fas fa-calendar-alt"></i><span> Duration : 2 Days 1 Night</span>
+                                <i class="fas fa-calendar-alt"></i><span> Duration : 3 Days 2Night</span>
                             </h3>
                             <h3>
-                                <i class="fas fa-mountain"></i><span> Package Type : Religious</span>
+                                <i class="fas fa-mountain"></i><span> Package Type : Cultural</span>
                             </h3>
                             <h3>
                                 <i class="fas fa-map"></i><span> Ends At : Itahari</span>
@@ -102,29 +102,29 @@ echo'<li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login
                     </div>
                     <div class="book_left_card_btm">
                         <h3>
-                            <i class="fas fa-map-signs"></i><span> Trip Route : Itahari-Koshi barage -Mirchaiya-Janakpur
+                            <i class="fas fa-map-signs"></i><span> Trip Route : Itahari-Hetauda-Bharatpur-Nawalparasi-kapilvastu
                                 </span>
                         </h3>
                         <h3>
-                            <i class="fas fa-cloud-sun"></i><span> Best Season : Sep -Oct -Nov -Dec/ Mar -Apr</span>
+                            <i class="fas fa-cloud-sun"></i><span> Best Season : Oct -Nov -Dec -Mar -Apr -May</span>
                         </h3>
                     </div>
                 </div>
             </div>
         </div>
         <div class="book_right">
-            <h3>Janakpur Tour</h3>
+            <h3>Lumbini Tour</h3>
             <p>
-            The oldest temple in Janakpur is Sri Ram Temple, built by the Gorkhali General Amar Singh Thapa. You can visit the over 200 sacred ponds in the city used for ritual baths by the pilgrims. The two most important ponds- Dhanush Sagar and Ganga Sagar, are located close to the city center.
+             This legendary Lumbini Pilgrimage tours package is specially designed as an exclusive Buddhist pilgrimage cultural tours in the birthplace of Gautam Buddha. Lumbini, the sacred place offers so many places to explore such as; World Peace Pagoda, Lumbini Crane Sanctuary, Kudan, Gotihawa, Nillihawa, Lumbini Garden, The Ashoka Pillar,The Mayadevi Temple, Puskarni, and many more.
                 <br><br>
-               Janaki Mandir is the biggest temple in Nepal with 4,860 square feet. Area is also locate at janakpur.It is the biggest temple in Nepal. This temple is also known as Janakpur Dham, Ram Janaki temple, or Sita Mandir.
+                The Ashoka Pillar in Lumbini is one of the 3rd Century stone pillars built under the reign of Emperor Ashoka.The pillar is located inside the serene Maya Devi Temple complex.
                 <br><br>
-                The only railway's station (i.e.Janakpur-Jayanagar railways) lies here in janakpur.With in these two days we will be visiting all the cultural places including big and small temples and other tourism destinations nearby.<br><br>
+                Walk in the footsteps of Buddha as you explore the region where he spent his childhood as Prince Siddhartha. The exact spot where Buddha was born is marked here in Lumbini and the site has understandably become one of the world’s most important holy sites.<br><br>
                 <hr>
                 </hr>
             </p>
             <div class="price-button">
-                <h2 style="padding-top:10%;width:20px;">Rs.3000
+            <h2 style="padding-top:10%;width:20px;">Rs.5000
                 </h2><p style="font-size:1rem;display:line;padding-top:12%;padding-left:8%;font-style:italic;color:#7D7E8C;">perperson.</P> 
                 <button><b><a href="bookform.php" style="text-decoration:none;color:white;">BookNow</b></a></button>
             </div>

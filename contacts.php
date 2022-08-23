@@ -1,3 +1,31 @@
+<?php 
+session_start ();
+if(!isset($_SESSION["login_session"]))
+
+	header("location:login.php"); 
+?>
+<?php
+include "db-connect.php";
+
+if(isset($_POST['submit'])){
+    
+    $username=$_POST["uname"];
+    $register_email=$_SESSION['email_session'];
+    $usermessage=$_POST["umessage"];
+   
+        $sql = "INSERT INTO `message`( uname, uemail, umessage) VALUES ('$username','$register_email','$usermessage')";
+    $result = mysqli_query($con,$sql);
+    if($result){
+        echo'message sent';
+        header("location: new.php");
+    }
+    else{
+        die(mysqli_error($con));
+    }
+    }   
+
+?>
+
 <html>
 
 <head>
@@ -37,7 +65,17 @@
                 <li><a href="tours.php">Tours</a></li>
                 <li> <a href="story.php">Stories</a></li>
                 <li style="padding-right: 20px;"><a href="contacts.php " class="bcgrnd-stay">Contact</a></li>
-                <li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login.php"  style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Login/SignUp</a></button></li>
+                <?php 
+                
+if(isset($_SESSION["login_session"])){
+echo'<li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="logout.php" style="font-family:Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;" >LogOut</a></button></li>';
+}
+?>
+             <?php 
+if(!isset($_SESSION["login_session"])){
+echo'<li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login.php" style="font-family:Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;" >Login/SignUp</a></button></li>';
+}
+?>
             </ul>
 
         </div>
@@ -63,22 +101,21 @@
 
 
         <div class="cn">
-            <form id="myform">
+            <form id="myform" method="POST">
                 <h2>WRITE TO US</h2><br>
                 <h3>Have some queries? Write to us.</h3><br>
                 <p><b>Name</b></p><br>
-                <input id="name" type="text" placeholder="Enter your name">
+                <input name="uname" type="text" placeholder="Enter your name">
                 <br>
                 <br>
-                <p><b>Email</b></p><br>
-                <input id="name" type="text" placeholder="sar@gmail.com">
+
 
                 <br><br>
                 <p><b>Message</b></p><br>
-                <textarea id="txt" rows="5" columns="0"></textarea><br>
+                <textarea name="umessage" rows="5" columns="0"></textarea><br>
                 <br><br>
 
-                <button type="button" onclick="sendEmail()" value="send" id="bt"><b>Send</b></button>
+                <button name="submit" id="bt" ><b>Send</b></button>
 
             </form>
         </div>

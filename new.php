@@ -6,6 +6,7 @@ if(isset($_POST['signup'])){
     $username=$_POST["username"];
     $password=$_POST["password"];
     $email=$_POST["email"];
+    $mobile=$_POST["umobile"];
     $sql=mysqli_query($con,"SELECT * FROM register where email= '$email'");
     if(mysqli_num_rows($sql)>0)
     {
@@ -15,7 +16,7 @@ if(isset($_POST['signup'])){
     }
     else{
     
-        $sql = "INSERT INTO `register`( username, password, email) VALUES ('$username', '$password', '$email')";
+        $sql = "INSERT INTO `register`( username, password, email,umobile) VALUES ('$username', '$password', '$email','$mobile')";
     $result = mysqli_query($con,$sql);
     if($result){
         header("location: login.php");
@@ -46,14 +47,23 @@ if(isset($_POST['signup'])){
 
     <!--script-->
     <script rel="javascript" >
-    function disable() {
-    var myInput = document.getElementById("myInput");
-    if (!myInput.value.length) {
-        window.location = 'new.php';
-        return;
+ 
+function search(){
+    var str= document.getElementById("myInput").value;
+    var wordCount = str.length;
+    if(wordCount == 8){
+        window.location.href = "Book.php";
     }
-    window.location = 'book.php';
-  
+    else if(wordCount == 5){
+        window.location.href = "Bookmardi.php";
+    }
+    else if(wordCount == 7){
+        window.location.href = "Booknext.php";
+    }
+    else{
+        alert("no package available for required input");
+        
+    }
 }
 </script>
 
@@ -103,7 +113,7 @@ echo'<li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login
     </nav>
     <div class="landing">
         <div class="search-bar ">
-        <input type="text " placeholder="Search.. " id="myInput" ><button onclick="disable()" >Search</button>
+        <input type="text " placeholder="Search.. " id="myInput" ><button onclick="search()" >Search</button>
             <p class="slogan ">Explore beyond limits</p>
         </div>
     </div>
@@ -138,14 +148,14 @@ echo'<li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login
         <p class="common ">pick a destination</p>
     </div>
     <div class="images">
-    <a href="Book.php">  <img src="images/lake.jpg " class="hey "></a>
-    <a href="Book.php">  <img src="images/farguuy.jpg " class="hey "></a>
-    <a href="Book.php"> <img src="images/forestTemple.jpg " class="hey "></a>
-    <a href="Book.php">  <img src="images/bridge.jpg " class="hey "></a>
-    <a href="Book.php">  <img src="images/dessert.jpg " class="hey "></a>
-    <a href="Book.php">  <img src="images/elephant.jpg " class="hey "></a>
-    <a href="Book.php">  <img src="images/cap.jpg " class="hey "></a>
-    <a href="Book.php">  <img src="images/temple.jpg " class="hey "></a>  
+    <a href="Booknext.php">  <img src="images/lake.jpg " class="hey "></a>
+    <a href="Booknext.php">  <img src="images/farguuy.jpg " class="hey "></a>
+    <a href="Booknext.php"> <img src="images/forestTemple.jpg " class="hey "></a>
+    <a href="Booknext.php">  <img src="images/lumbini.jpg " class="hey "></a>
+    <a href="Booknext.php">  <img src="images/dessert.jpg " class="hey "></a>
+    <a href="Booknext.php">  <img src="images/elephant.jpg " class="hey "></a>
+    <a href="Booknext.php">  <img src="images/cap.jpg " class="hey "></a>
+    <a href="Booknext.php">  <img src="images/temple.jpg " class="hey "></a>  
         
     </div>
 
@@ -156,14 +166,14 @@ echo'<li class="mybtn "> <button class="loginBtn "><a class="btntxt" href="login
         <p class="common ">our best offer</p>
     </div>
     <div class="images ">
-        <img src="images/lake.jpg " class="hey ">
-        <img src="images/farguuy.jpg " class="hey ">
-        <img src="images/forestTemple.jpg " class="hey ">
-        <img src="images/bridge.jpg " class="hey ">
-        <img src="images/dessert.jpg " class="hey ">
-        <img src="images/elephant.jpg " class="hey ">
-        <img src="images/cap.jpg " class="hey ">
-        <img src="images/temple.jpg " class="hey ">
+    <a href="Bookmardi.php">  <img src="images/lake.jpg " class="hey "></a>
+    <a href="Bookmardi.php">  <img src="images/farguuy.jpg " class="hey "></a>
+    <a href="Bookmardi.php"> <img src="images/forestTemple.jpg " class="hey "></a>
+        <a href="Bookmardi.php">  <img src="images/mardi.jpeg " class="hey "></a>
+        <a href="Bookmardi.php"><img src="images/dessert.jpg " class="hey "></a>
+        <a href="Bookmardi.php">  <img src="images/elephant.jpg " class="hey "></a>
+        <a href="Bookmardi.php"> <img src="images/cap.jpg " class="hey "></a>
+        <a href="Bookmardi.php"> <img src="images/temple.jpg " class="hey "></a>
 
     </div>
     </div>
@@ -185,6 +195,7 @@ echo '<div class="login-page ">
                     <input type="text " id="username" name="username" placeholder="name " />
                     <input type="password " id="password" name="password" placeholder="password " />
                     <input type="text " id="email" name="email" placeholder="email address " />
+                    <input type="number" id="umobile" name="umobile" placeholder="mobile number " />
                     <button type="submit" name="signup" >create</button>
                 </form>
             </div>
@@ -209,10 +220,10 @@ echo '
         <p class="common ">best local destinations</p>
     </div>
     <div class="images ">
-        <img src="images/lake.jpg " class="hey ">
-        <img src="images/farguuy.jpg " class="hey ">
-        <img src="images/forestTemple.jpg " class="hey ">
-        <img src="images/bridge.jpg " class="hey ">
+    <a href="Booknext.php">  <img src="images/lake.jpg " class="hey "></a>
+    <a href="Booknext.php"> <img src="images/farguuy.jpg " class="hey "></a>
+    <a href="Booknext.php">  <img src="images/forestTemple.jpg " class="hey "></a>
+    <a href="Booknext.php">   <img src="images/bridge.jpg " class="hey "></a>
 
     </div>
     <div class="topics ">
@@ -227,8 +238,8 @@ echo '
         <div class="about-us ">
             <div style="padding:30px ">
                 <img src="images/aboutus1.jpg " height="70px " width="70px " style="border-radius:50%;display: block;margin-left: auto;margin-right: auto; ">
-                <p class="pplsay ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe commodi deserunt omnis asperiores dolorem perferendis excepturi molestias, ut maiores ipsam vitae, temporibus atque natus reiciendis praesentium doloremque, dolores sequi.
-                    Perspiciatis?
+                <p class="pplsay ">One interesting trend we’re seeing is that more and more people are booking trips directly, so communities need to be supported to digitize their systems.I personally find Tour Nepal as one of the best online tourism platform for any types of tourists.
+                    
                 </p>
                 <svg class="svg_aboutus " viewBox="0 0 20 20 " xmlns="http://www.w3.org/2000/svg "><path fill-rule="evenodd " d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986
                     5.986 0 004.546-2.084A5 5 0 0010 11z " clip-rule="evenodd "></path></svg>
@@ -236,8 +247,8 @@ echo '
             </div>
             <div style="padding:30px ">
                 <img src="images/aboutus2.jpg " height="70px " width="70px " style="border-radius:50%;display: block;margin-left: auto;margin-right: auto; ">
-                <p class="pplsay ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe commodi deserunt omnis asperiores dolorem perferendis excepturi molestias, ut maiores ipsam vitae, temporibus atque natus reiciendis praesentium doloremque, dolores sequi.
-                    Perspiciatis?
+                <p class="pplsay "> Real-world experiences need to remain front and centre. Technology tools should be viewed as enablers and not the core experience.The important thing is the experience. The destination.
+                    
                 </p>
                 <svg class="svg_aboutus " viewBox="0 0 20 20 " xmlns="http://www.w3.org/2000/svg "><path fill-rule="evenodd " d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986
                     5.986 0 004.546-2.084A5 5 0 0010 11z " clip-rule="evenodd "></path></svg>
@@ -246,7 +257,7 @@ echo '
             </div>
             <div style="padding:30px ">
                 <img src="images/aboutus3.jpg " height="70px " width="70px " style="border-radius:50%;display: block;margin-left: auto;margin-right: auto; ">
-                <p class="pplsay ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe commodi deserunt omnis asperiores dolorem perferendis excepturi molestias, ut maiores ipsam vitae, temporibus atque natus reiciendis praesentium doloremque, dolores sequi.
+                <p class="pplsay ">Since Tour nepal is the number one company in Nepal to Travel domestic location. You can always be confident that you are getting the best deal possible. You'll be able to find the perfect vacation package for you, your family, or your group of friends.
                     Perspiciatis?
                 </p>
                 <svg class=" svg_aboutus " viewBox="0 0 20 20 " xmlns="http://www.w3.org/2000/svg "><path fill-rule="evenodd " d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986
